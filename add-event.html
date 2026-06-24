@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Add a new campus event to CampusConnect. Share your club meetings, sports, workshops, or fests.">
+    <title>CampusConnect — Add Event</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                Campus<span>Connect</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="add-event.html" class="active">Add Event</a></li>
+                <li><a href="my-registrations.html">My Registrations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <div class="form-container">
+            <div class="form-title-area">
+                <h1>Add New Event</h1>
+                <p>Fill out the form below to publish your event on the CampusConnect listing.</p>
+            </div>
+            <!-- Add Event Form -->
+            <form id="add-event-form" novalidate>
+
+                <!-- Event Name -->
+                <div class="form-group">
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="eventName" placeholder="e.g. Annual Tech Fest" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <!-- Category select -->
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>-- Select a Category --</option>
+                        <option value="fest">Fest</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="sports">Sports</option>
+                        <option value="club">Club</option>
+                    </select>
+                    <span class="error-message" id="cat-error"></span>
+                </div>
+                <!-- Event Date and Time in double column on desktop -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <!-- Date -->
+                    <div class="form-group">
+                        <label for="event-date">Date</label>
+                        <input type="date" id="event-date" name="eventDate" required>
+                        <span class="error-message" id="date-error"></span>
+                    </div>
+                    <!-- Time -->
+                    <div class="form-group">
+                        <label for="event-time">Time</label>
+                        <input type="time" id="event-time" name="eventTime" required>
+                        <span class="error-message" id="time-error"></span>
+                    </div>
+                </div>
+                <!-- Venue -->
+                <div class="form-group">
+                    <label for="venue">Venue</label>
+                    <input type="text" id="venue" name="venue" placeholder="e.g. Auditorium, Lab 3" required>
+                    <span class="error-message" id="venue-error"></span>
+                </div>
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description (Min 20 characters)</label>
+                    <textarea id="description" name="description" rows="5"
+                        placeholder="Provide a detailed description of the event, what participants should expect, and any prerequisites..."
+                        required></textarea>
+                    <span class="error-message" id="desc-error"></span>
+                </div>
+                <!-- Organiser Name -->
+                <div class="form-group">
+                    <label for="organiser-name">Organiser / Club Name</label>
+                    <input type="text" id="organiser-name" name="organiserName"
+                        placeholder="e.g. Computer Society of India" required>
+                    <span class="error-message" id="organiser-name-error"></span>
+                </div>
+                <!-- Organiser Email -->
+                <div class="form-group">
+                    <label for="organiser-email">Organiser Email</label>
+                    <input type="email" id="organiser-email" name="organiserEmail" placeholder="e.g. club@campus.edu"
+                        required>
+                    <span class="error-message" id="organiser-email-error"></span>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Submit Event</button>
+            </form>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>CampusConnect</strong>. All rights reserved.</p>
+        <p>Built with &hearts; by ImpactPath Intern</p>
+    </footer>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <span id="toast-message">Event added successfully!</span>
+    </div>
+    <!-- JavaScript file -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
