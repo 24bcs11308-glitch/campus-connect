@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover, create, and register for campus events. Stay connected with the latest fests, workshops, sports, and club meetings on campus.">
+    <title>CampusConnect — Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                Campus<span>Connect</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="add-event.html">Add Event</a></li>
+                <li><a href="my-registrations.html">My Registrations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Your Campus, Your Events.</h1>
+            <p>Discover fests, workshops, sports, and club meetings happening around you. Stay connected and never miss
+                out on anything.</p>
+            <a href="events.html" class="btn-primary">Browse Events</a>
+        </section>
+        <!-- Featured Events Section -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">Featured Events</h2>
+                <a href="events.html" class="btn-secondary">View All</a>
+            </div>
+
+            <!-- Grid to display featured events (We'll render 3 placeholders that are also dynamic in JS) -->
+            <div class="events-grid" id="featured-grid">
+                <!-- Event Cards will be dynamically loaded/synchronized from JS, or fallback to server-side static if JS disabled -->
+                <article class="event-card">
+                    <span class="category-badge badge-fest">Fest</span>
+                    <h3>Annual Tech Fest 2026</h3>
+                    <div class="event-meta">
+                        <div><strong>Date:</strong> 2026-09-15</div>
+                        <div><strong>Venue:</strong> Main Auditorium</div>
+                    </div>
+                    <p class="description">A 2-day celebration of technology, innovation and student projects from all
+                        over the country.</p>
+                    <a href="event-detail.html?id=1" class="btn-primary">View Details</a>
+                </article>
+                <article class="event-card">
+                    <span class="category-badge badge-workshop">Workshop</span>
+                    <h3>Python for Beginners</h3>
+                    <div class="event-meta">
+                        <div><strong>Date:</strong> 2026-09-20</div>
+                        <div><strong>Venue:</strong> Lab 3, Block B</div>
+                    </div>
+                    <p class="description">Hands-on introduction to Python programming for first-year students. No prior
+                        coding experience required.</p>
+                    <a href="event-detail.html?id=2" class="btn-primary">View Details</a>
+                </article>
+                <article class="event-card">
+                    <span class="category-badge badge-sports">Sports</span>
+                    <h3>Inter-College Cricket Tournament</h3>
+                    <div class="event-meta">
+                        <div><strong>Date:</strong> 2026-10-05</div>
+                        <div><strong>Venue:</strong> Campus Sports Ground</div>
+                    </div>
+                    <p class="description">Cheer for your college team as they compete for the championship in the
+                        annual cricket league.</p>
+                    <a href="event-detail.html?id=3" class="btn-primary">View Details</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>CampusConnect</strong>. All rights reserved.</p>
+        <p>Built with &hearts; by ImpactPath Intern</p>
+    </footer>
+    <!-- Link JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

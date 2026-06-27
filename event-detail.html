@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View complete details and register for the event on CampusConnect.">
+    <title>CampusConnect — Event Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                Campus<span>Connect</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="add-event.html">Add Event</a></li>
+                <li><a href="my-registrations.html">My Registrations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- Back to Events Link -->
+        <a href="events.html" class="back-link">
+            &larr; Back to Events
+        </a>
+        <!-- Detail Container -->
+        <div id="detail-container">
+            <!-- Loading State / Fallback -->
+            <div class="detail-grid">
+                <!-- Main Details Column -->
+                <div class="detail-main">
+                    <div class="detail-header">
+                        <span class="category-badge badge-fest" id="event-category">Fest</span>
+                        <h1 id="event-title">Loading Event Title...</h1>
+                    </div>
+                    <div class="detail-meta-list">
+                        <div class="detail-meta-item">
+                            <span class="detail-meta-label">Date</span>
+                            <span class="detail-meta-value" id="event-date">Loading...</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span class="detail-meta-label">Time</span>
+                            <span class="detail-meta-value" id="event-time">Loading...</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span class="detail-meta-label">Venue</span>
+                            <span class="detail-meta-value" id="event-venue">Loading...</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span class="detail-meta-label">Category</span>
+                            <span class="detail-meta-value" id="event-category-name">Loading...</span>
+                        </div>
+                    </div>
+                    <div class="detail-content">
+                        <h2>About this Event</h2>
+                        <p id="event-desc">Loading detailed description of the event...</p>
+                    </div>
+                </div>
+                <!-- Sidebar Registration Column -->
+                <div class="detail-sidebar">
+                    <!-- Register Action Card -->
+                    <div class="sidebar-card">
+                        <h3>Registration</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-light); font-size: 0.95rem;">Join us for this
+                            event! Registration is free for all campus students.</p>
+                        <button id="register-btn" class="btn-primary">Register for this Event</button>
+                    </div>
+                    <!-- Organizer Info Card -->
+                    <div class="sidebar-card">
+                        <h3>Organized By</h3>
+                        <div class="organizer-info">
+                            <div class="organizer-field">
+                                <span class="organizer-label">Name</span>
+                                <span class="organizer-val" id="organiser-name">Loading Organizer...</span>
+                            </div>
+                            <div class="organizer-field" style="margin-top: 10px;">
+                                <span class="organizer-label">Contact Email</span>
+                                <span class="organizer-val" id="organiser-email">Loading Email...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 <strong>CampusConnect</strong>. All rights reserved.</p>
+        <p>Built with &hearts; by ImpactPath Intern</p>
+    </footer>
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">
+        <span id="toast-message">Action processed!</span>
+    </div>
+    <!-- JavaScript file -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
